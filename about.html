@@ -151,11 +151,13 @@ h1,h2{font-family:var(--display);text-transform:lowercase;line-height:.95;letter
 .work-card .shot{aspect-ratio:16/10;overflow:hidden}
 .work-card .shot img,.work-card .shot .ph{transition:transform .5s ease,filter .4s ease}
 .work-card:hover .shot img{transform:scale(1.04)}
+.work-card .shot.fit-contain{display:flex;align-items:center;justify-content:center;background:var(--ink-2)}
+.work-card .shot.fit-contain img{object-fit:contain;height:100%;width:100%}
 .work-card .info{
   display:flex;justify-content:space-between;align-items:baseline;gap:14px;
   padding:18px 20px;border-top:1px solid var(--line);
 }
-.work-card .info h3{font-family:var(--display);font-size:clamp(17px,2vw,22px);text-transform:lowercase}
+.work-card .info h3{font-family:var(--display);font-size:clamp(17px,2vw,22px)}
 .work-card .info span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .work-card::after{ /* accent corner on hover */
   content:"";position:absolute;top:0;right:0;width:0;height:0;
@@ -295,19 +297,19 @@ footer .socials a:hover{color:var(--accent)}
   <div class="about-grid">
     <div>
       <!-- Edit this story to make it yours -->
-      <p class="reveal"><strong>Apex is a one-person web design studio.</strong> I design and build websites for small businesses and independent brands — the kind of sites that look sharp, load fast and actually bring customers through the door.</p>
-      <p class="reveal">I started Apex because too many small businesses get stuck with the same choice: an expensive agency, or a drag-and-drop template that looks like everyone else's. There's a better middle ground — a site built by hand, around your brand, at a price that makes sense.</p>
-      <p class="reveal">Every project gets the same treatment: I learn what your business does, design something that fits it, and build a site that's fast, mobile-optimised, and set up to perform well in search. No subscriptions, no lock-in.</p>
+      <p class="reveal"><strong>Apex is a one-person web design studio</strong>, built on a mix of business thinking and design skill you don't often find in one place. I design and build websites for small businesses and independent brands — the kind of sites that look sharp, load fast and actually bring customers through the door.</p>
+      <p class="reveal">I studied Business Technology at Ulster University — a degree that sits right at the intersection of how businesses actually operate and how technology can serve them. That's the lens I bring to every site I build: not just what looks good, but what's structured to support real business outcomes, whether that's bookings, enquiries, or sales.</p>
+      <p class="reveal">I spent 5+ years in business consultancy with one of the world's leading professional services firms, working with organisations on strategy and performance at a serious level. That background shapes how I approach every project — asking the right questions before building anything, so the finished site does a job for your business rather than just existing.</p>
+      <p class="reveal">I started Apex because too many small businesses face the same choice: an expensive agency, or a generic template that looks like everyone else's. There's a better middle ground — a site built around your brand and your goals, backed by real business thinking, at a price that makes sense.</p>
+      <p class="reveal">Every project gets the same process: understand the business, design something that fits it, and build a site that's fast, mobile-optimised, and set up to perform well in search. No subscriptions, no lock-in.</p>
 
       <div class="stack reveal">
-        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub</span><span>Responsive design</span><span>SEO basics</span>
+        <span>Web design</span><span>Business strategy</span><span>Brand identity</span><span>Responsive design</span><span>SEO basics</span><span>Business consultation</span>
       </div>
     </div>
 
     <div class="media reveal">
-      <!-- Replace with a photo of you or your workspace:
-           <img src="images/me.jpg" alt="Your name, founder of Apex"> -->
-      <div class="ph">Your photo</div>
+      <img src="images/about-mountain.png" alt="apex. — the summit is the standard">
     </div>
   </div>
 </section>
