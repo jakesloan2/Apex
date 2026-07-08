@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>apex. — websites built sharp</title>
-<meta name="description" content="Apex is a web design studio building short, sharp websites that work. See the portfolio and get in touch.">
+<title>Portfolio — Web Design Northern Ireland | apex.</title>
+<meta name="description" content="Websites designed and built by Apex — a web design studio serving Belfast, North Down, Northern Ireland and clients across the UK.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="apex. — websites built sharp">
-<meta property="og:description" content="Apex is a web design studio building short, sharp websites that work.">
+<meta property="og:title" content="Portfolio — Web Design Northern Ireland | apex.">
+<meta property="og:description" content="Websites designed and built by Apex — a web design studio serving Belfast, North Down, Northern Ireland and clients across the UK.">
 <meta property="og:image" content="https://yourdomain.com/og-image.png">
-<meta property="og:url" content="https://yourdomain.com/index.html">
+<meta property="og:url" content="https://yourdomain.com/portfolio.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="apex. — websites built sharp">
-<meta name="twitter:description" content="Apex is a web design studio building short, sharp websites that work.">
+<meta name="twitter:title" content="Portfolio — Web Design Northern Ireland | apex.">
+<meta name="twitter:description" content="Websites designed and built by Apex — a web design studio serving Belfast, North Down, Northern Ireland and clients across the UK.">
 <meta name="twitter:image" content="https://yourdomain.com/og-image.png">
+<link rel="canonical" href="https://yourdomain.com/portfolio.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -272,6 +273,21 @@ footer .socials a:hover{color:var(--accent)}
 }
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "apex.",
+  "description": "Web design studio building fast, mobile-optimised websites for small businesses and independent brands.",
+  "url": "https://yourdomain.com/portfolio.html",
+  "areaServed": [
+    {"@type": "Place", "name": "Northern Ireland"},
+    {"@type": "Place", "name": "Belfast"},
+    {"@type": "Place", "name": "North Down"},
+    {"@type": "Place", "name": "United Kingdom"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -279,105 +295,57 @@ footer .socials a:hover{color:var(--accent)}
   <a href="index.html" class="logo" aria-label="apex home">apex<span class="dot">.</span></a>
   <button class="nav-toggle" aria-expanded="false" aria-controls="nav" onclick="toggleNav(this)">Menu</button>
   <nav id="nav">
-    <a href="index.html" aria-current="page">Home</a>
-    <a href="portfolio.html">Portfolio</a>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html" aria-current="page">Portfolio</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
   </nav>
 </header>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <p class="eyebrow">Web design studio</p>
-  <h1>apex<span class="dot">.</span><br><span class="outline">design</span></h1>
-  <div class="hero-sub">
-    <p>Short, sharp websites that do their job — built for speed, built for mobile, built to be found.</p>
-    <a class="btn btn-solid" href="portfolio.html">See the work &rarr;</a>
-  </div>
+<!-- ===================== PAGE HERO ===================== -->
+<section class="page-hero">
+  <p class="eyebrow">The work</p>
+  <h1>portfolio<span class="dot">.</span></h1>
+  <p>Every site here was designed and built from scratch. Click through — the work speaks for itself.</p>
 </section>
 
-<!-- ===================== MARQUEE ===================== -->
-<div class="marquee" aria-hidden="true">
-  <div class="marquee-track">
-    <span>Web design</span><span>Development</span><span>Branding</span><span>Landing pages</span><span>Small business sites</span><span>Portfolio sites</span>
-    <span>Web design</span><span>Development</span><span>Branding</span><span>Landing pages</span><span>Small business sites</span><span>Portfolio sites</span>
-  </div>
-</div>
-
-<!-- ===================== FEATURED WORK ===================== -->
-<section id="work">
-  <div class="section-head reveal">
-    <h2>selected work<span class="dot">.</span></h2>
-    <a class="count" href="portfolio.html">View all &rarr;</a>
-  </div>
+<!-- ===================== PROJECT GRID =====================
+     HOW TO ADD A PROJECT:
+     1. Duplicate one <a class="work-card"> block below
+     2. Swap the .ph placeholder for:
+        <img src="images/project-name.jpg" alt="Project name website">
+     3. Set the href to the live site URL
+     ========================================================= -->
+<section style="padding-top:0">
   <div class="work-grid">
-    <!-- Replace each .ph with a screenshot:
-         <img src="images/project-name.jpg" alt="Project name website"> -->
+
     <a class="work-card reveal" href="https://www.elevatedbeautyni.co.uk/" target="_blank" rel="noopener">
       <div class="shot"><img src="images/elevated-beauty.png" alt="Elevated Beauty NI website shown on a tablet"></div>
       <div class="info"><h3>Elevated Beauty NI</h3><span>Beauty studio — multi-page site &amp; booking</span></div>
     </a>
-    <a class="work-card reveal" href="portfolio.html">
+
+    <a class="work-card reveal" href="#" target="_blank" rel="noopener">
       <div class="shot fit-contain"><img src="images/j-barber-studio.jpg" alt="J Barber Studio website shown on a tablet"></div>
       <div class="info"><h3>J Barber Studio</h3><span>Barbershop — one-page site</span></div>
     </a>
-  </div>
-</section>
 
-<!-- ===================== RESULTS ===================== -->
-<section id="results">
-  <div class="section-head reveal">
-    <h2>built to perform<span class="dot">.</span></h2>
-    <span class="count">What every site delivers</span>
-  </div>
-  <div class="results-grid">
-    <div class="result-card reveal">
-      <span class="mark">&#9650;</span>
-      <h3>fast to load</h3>
-      <p>Pages load in a couple of seconds, so visitors stick around instead of bouncing before they see what you offer.</p>
-    </div>
-    <div class="result-card reveal">
-      <span class="mark">&#9650;</span>
-      <h3>mobile-optimised</h3>
-      <p>Built screen-first for phones and tablets, since that's where most visitors land before anywhere else.</p>
-    </div>
-    <div class="result-card reveal">
-      <span class="mark">&#9650;</span>
-      <h3>seo-ready</h3>
-      <p>Structured properly from day one, so search engines can find your business and rank it well.</p>
-    </div>
-  </div>
-</section>
+    <a class="work-card reveal" href="#">
+      <div class="shot fit-contain"><img src="images/coming-soon.png" alt="Apex — coming soon"></div>
+      <div class="info"><h3>Project Three</h3><span>Coming soon</span></div>
+    </a>
 
-<!-- ===================== WHAT I DO ===================== -->
-<section class="band-light">
-  <div class="section-head reveal">
-    <h2>what i do<span class="dot">.</span></h2>
-    <span class="count">Straightforward services</span>
-  </div>
-  <div class="row-list">
-    <div class="row reveal">
-      <span class="num">▲</span>
-      <h3>design</h3>
-      <p>A look built around your brand — not squeezed into a template. Bold type, clear layout, made to be remembered.</p>
-    </div>
-    <div class="row reveal">
-      <span class="num">▲</span>
-      <h3>build</h3>
-      <p>Fast to load, easy to maintain, and optimised for every screen size — from phones to desktops.</p>
-    </div>
-    <div class="row reveal">
-      <span class="num">▲</span>
-      <h3>launch</h3>
-      <p>Domain, hosting and go-live handled. You get a site that's yours — no monthly builder subscriptions.</p>
-    </div>
+    <a class="work-card reveal" href="#">
+      <div class="shot fit-contain"><img src="images/coming-soon.png" alt="Apex — coming soon"></div>
+      <div class="info"><h3>Project Four</h3><span>Coming soon</span></div>
+    </a>
+
   </div>
 </section>
 
 <!-- ===================== CTA ===================== -->
 <section class="cta">
-  <p class="eyebrow reveal">Got a project?</p>
-  <h2 class="reveal"><a href="contact.html">let's build it<span class="dot">.</span></a></h2>
+  <p class="eyebrow reveal">Want yours on this page?</p>
+  <h2 class="reveal"><a href="contact.html">start a project<span class="dot">.</span></a></h2>
 </section>
 
 <footer>
