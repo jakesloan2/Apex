@@ -3,21 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>contact — apex.</title>
-<meta name="description" content="Start a project with Apex web design.">
+<title>Contact — Web Design Belfast & North Down | apex.</title>
+<meta name="description" content="Start a project with Apex, a web design studio based in Northern Ireland, serving Belfast, North Down and the wider UK.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
-<meta property="og:title" content="contact — apex.">
-<meta property="og:description" content="Start a project with Apex web design.">
+<meta property="og:title" content="Contact — Web Design Belfast & North Down | apex.">
+<meta property="og:description" content="Start a project with Apex, a web design studio based in Northern Ireland, serving Belfast, North Down and the wider UK.">
 <meta property="og:image" content="https://yourdomain.com/og-image.png">
 <meta property="og:url" content="https://yourdomain.com/contact.html">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="contact — apex.">
-<meta name="twitter:description" content="Start a project with Apex web design.">
+<meta name="twitter:title" content="Contact — Web Design Belfast & North Down | apex.">
+<meta name="twitter:description" content="Start a project with Apex, a web design studio based in Northern Ireland, serving Belfast, North Down and the wider UK.">
 <meta name="twitter:image" content="https://yourdomain.com/og-image.png">
+<link rel="canonical" href="https://yourdomain.com/contact.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -151,11 +152,13 @@ h1,h2{font-family:var(--display);text-transform:lowercase;line-height:.95;letter
 .work-card .shot{aspect-ratio:16/10;overflow:hidden}
 .work-card .shot img,.work-card .shot .ph{transition:transform .5s ease,filter .4s ease}
 .work-card:hover .shot img{transform:scale(1.04)}
+.work-card .shot.fit-contain{display:flex;align-items:center;justify-content:center;background:var(--ink-2)}
+.work-card .shot.fit-contain img{object-fit:contain;height:100%;width:100%}
 .work-card .info{
   display:flex;justify-content:space-between;align-items:baseline;gap:14px;
   padding:18px 20px;border-top:1px solid var(--line);
 }
-.work-card .info h3{font-family:var(--display);font-size:clamp(17px,2vw,22px);text-transform:lowercase}
+.work-card .info h3{font-family:var(--display);font-size:clamp(17px,2vw,22px)}
 .work-card .info span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
 .work-card::after{ /* accent corner on hover */
   content:"";position:absolute;top:0;right:0;width:0;height:0;
@@ -270,6 +273,21 @@ footer .socials a:hover{color:var(--accent)}
 }
 
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "apex.",
+  "description": "Web design studio building fast, mobile-optimised websites for small businesses and independent brands.",
+  "url": "https://yourdomain.com/contact.html",
+  "areaServed": [
+    {"@type": "Place", "name": "Northern Ireland"},
+    {"@type": "Place", "name": "Belfast"},
+    {"@type": "Place", "name": "North Down"},
+    {"@type": "Place", "name": "United Kingdom"}
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -336,7 +354,7 @@ footer .socials a:hover{color:var(--accent)}
       </div>
       <div>
         <h4>Based in</h4>
-        <p>Your city — working with clients anywhere.</p>
+        <p>North Down, Northern Ireland — working with clients across Belfast, NI and the wider UK.</p>
       </div>
       <div>
         <h4>Response time</h4>
