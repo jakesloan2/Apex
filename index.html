@@ -4,21 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>apex. — Web Design Studio | Northern Ireland & UK</title>
-<meta name="description" content="Apex is a web design studio based in Northern Ireland, building websites for businesses across Belfast, North Down, NI and the wider UK.">
+<meta name="description" content="Apex is a web design studio based in Northern Ireland, building short, sharp websites for emerging businesses across Belfast, North Down, NI and the wider UK.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="apex. — Web Design Studio | Northern Ireland & UK">
-<meta property="og:description" content="Apex is a web design studio based in Northern Ireland, building websites businesses across Belfast, North Down, NI and the wider UK.">
-<meta property="og:image" content="https://yourdomain.com/og-image.png">
-<meta property="og:url" content="https://yourdomain.com/index.html">
+<meta property="og:description" content="Apex is a web design studio based in Northern Ireland, building short, sharp websites for emerging businesses across Belfast, North Down, NI and the wider UK.">
+<meta property="og:image" content="https://apexdesignni.co.uk/og-image.png">
+<meta property="og:url" content="https://apexdesignni.co.uk/index.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="apex. — Web Design Studio | Northern Ireland & UK">
-<meta name="twitter:description" content="Apex is a web design studio based in Northern Ireland, building websites for businesses across Belfast, North Down, NI and the wider UK.">
-<meta name="twitter:image" content="https://yourdomain.com/og-image.png">
-<link rel="canonical" href="https://yourdomain.com/index.html">
+<meta name="twitter:description" content="Apex is a web design studio based in Northern Ireland, building short, sharp websites for emerging businesses across Belfast, North Down, NI and the wider UK.">
+<meta name="twitter:image" content="https://apexdesignni.co.uk/og-image.png">
+<link rel="canonical" href="https://apexdesignni.co.uk/index.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -247,8 +247,35 @@ footer{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
 }
 footer .logo{font-size:14px;color:var(--paper)}
-footer .socials{display:flex;gap:18px}
+footer .socials{display:flex;gap:18px;align-items:center}
+footer .socials a{display:flex;align-items:center;color:var(--paper);transition:color .2s}
 footer .socials a:hover{color:var(--accent)}
+footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}
+
+/* ---------- site credit ---------- */
+.site-credit{
+  border-top:1px solid var(--line);
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.site-credit a{display:inline-flex;align-items:center;gap:7px;color:var(--muted);transition:color .2s}
+.site-credit a:hover{color:var(--accent)}
+.site-credit img{height:14px;width:auto;display:block}
+
+/* ---------- real results / trend card ---------- */
+.trend-card{
+  border:1px solid var(--line);background:var(--ink-2);
+  padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;
+}
+.trend-card .chart{width:100%;display:block}
+.trend-stats{display:flex;flex-direction:column;gap:22px}
+.trend-stat .num{font-family:var(--display);font-size:clamp(30px,4.2vw,46px);color:var(--paper);line-height:1}
+.trend-stat .headline{font-family:var(--display);font-size:clamp(22px,2.8vw,30px);color:var(--paper);line-height:1.2}
+.trend-stat .num .up{color:var(--accent);font-size:.4em;vertical-align:top;margin-left:8px;letter-spacing:0}
+.trend-stat .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:8px}
+.trend-source{margin-top:6px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:780px){.trend-card{grid-template-columns:1fr}}
 
 /* ---------- results / guarantees ---------- */
 .results-grid{
@@ -278,8 +305,8 @@ footer .socials a:hover{color:var(--accent)}
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "apex.",
-  "description": "Web design studio building fast, mobile-optimised websites for businesses and independent brands.",
-  "url": "https://yourdomain.com/index.html",
+  "description": "Web design studio building fast, mobile-optimised websites for emerging businesses and independent brands.",
+  "url": "https://apexdesignni.co.uk/index.html",
   "areaServed": [
     {"@type": "Place", "name": "Northern Ireland"},
     {"@type": "Place", "name": "Belfast"},
@@ -307,7 +334,7 @@ footer .socials a:hover{color:var(--accent)}
   <p class="eyebrow">Web design studio — Northern Ireland &amp; UK</p>
   <h1>apex<span class="dot">.</span><br><span class="outline">design</span></h1>
   <div class="hero-sub">
-    <p>Websites that do their job — built for speed, built for mobile, built to be found.</p>
+    <p>Short, sharp websites that do their job — built for speed, built for mobile, built to be found.</p>
     <a class="btn btn-solid" href="portfolio.html">See the work &rarr;</a>
   </div>
 </section>
@@ -365,6 +392,38 @@ footer .socials a:hover{color:var(--accent)}
   </div>
 </section>
 
+<!-- ===================== REAL RESULTS ===================== -->
+<section id="real-results">
+  <div class="section-head reveal">
+    <h2>it's working<span class="dot">.</span></h2>
+    <span class="count">Proof, not promises</span>
+  </div>
+  <div class="trend-card reveal">
+    <svg class="chart" viewBox="0 0 320 140" preserveAspectRatio="none" role="img" aria-label="Rising website visits trend, June 2026">
+      <defs>
+        <linearGradient id="trendFill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2946d9" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#2946d9" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <polygon points="0,120 60,106 120,96 180,72 240,44 320,16 320,140 0,140" fill="url(#trendFill)"/>
+      <polyline points="0,120 60,106 120,96 180,72 240,44 320,16" fill="none" stroke="#2946d9" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle cx="320" cy="16" r="5" fill="#2946d9"/>
+    </svg>
+    <div class="trend-stats">
+      <div class="trend-stat">
+        <div class="headline">Double-digit growth<span class="up"> ↑</span></div>
+        <div class="label">In website visits driven by Google Search &amp; Maps</div>
+      </div>
+      <div class="trend-stat">
+        <div class="headline">Rising local visibility<span class="up"> ↑</span></div>
+        <div class="label">Profile views and searches trending up, month over month</div>
+      </div>
+    </div>
+  </div>
+  <p class="trend-source reveal">Real Google Business Profile data — Elevated Beauty NI, first month after launch.</p>
+</section>
+
 <!-- ===================== WHAT I DO ===================== -->
 <section class="band-light">
   <div class="section-head reveal">
@@ -385,7 +444,7 @@ footer .socials a:hover{color:var(--accent)}
     <div class="row reveal">
       <span class="num">▲</span>
       <h3>launch</h3>
-      <p>Domain, hosting and go-live handled. You get a site that's works with tangible results.</p>
+      <p>Domain, hosting and go-live handled. You get a site that's yours — no monthly builder subscriptions.</p>
     </div>
   </div>
 </section>
@@ -399,10 +458,20 @@ footer .socials a:hover{color:var(--accent)}
 <footer>
   <a href="index.html" class="logo">apex<span class="dot">.</span></a>
   <div class="socials">
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/apexdesignni/" target="_blank" rel="noopener" aria-label="Apex on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4.2"/>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
   </div>
   <span>&copy; 2026 apex.</span>
 </footer>
+
+<div class="site-credit">
+  <a href="index.html">Site by apex.</a>
+</div>
 
 <script>
 // ============================================================
