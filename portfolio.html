@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Portfolio — Web Design Northern Ireland | apex.">
 <meta property="og:description" content="Websites designed and built by Apex — a web design studio serving Belfast, North Down, Northern Ireland and clients across the UK.">
-<meta property="og:image" content="https://yourdomain.com/og-image.png">
-<meta property="og:url" content="https://yourdomain.com/portfolio.html">
+<meta property="og:image" content="https://apexdesignni.co.uk/og-image.png">
+<meta property="og:url" content="https://apexdesignni.co.uk/portfolio.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Portfolio — Web Design Northern Ireland | apex.">
 <meta name="twitter:description" content="Websites designed and built by Apex — a web design studio serving Belfast, North Down, Northern Ireland and clients across the UK.">
-<meta name="twitter:image" content="https://yourdomain.com/og-image.png">
-<link rel="canonical" href="https://yourdomain.com/portfolio.html">
+<meta name="twitter:image" content="https://apexdesignni.co.uk/og-image.png">
+<link rel="canonical" href="https://apexdesignni.co.uk/portfolio.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -247,8 +247,21 @@ footer{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
 }
 footer .logo{font-size:14px;color:var(--paper)}
-footer .socials{display:flex;gap:18px}
+footer .socials{display:flex;gap:18px;align-items:center}
+footer .socials a{display:flex;align-items:center;color:var(--paper);transition:color .2s}
 footer .socials a:hover{color:var(--accent)}
+footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}
+
+/* ---------- site credit ---------- */
+.site-credit{
+  border-top:1px solid var(--line);
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.site-credit a{display:inline-flex;align-items:center;gap:7px;color:var(--muted);transition:color .2s}
+.site-credit a:hover{color:var(--accent)}
+.site-credit img{height:14px;width:auto;display:block}
 
 /* ---------- results / guarantees ---------- */
 .results-grid{
@@ -278,8 +291,8 @@ footer .socials a:hover{color:var(--accent)}
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "apex.",
-  "description": "Web design studio building fast, mobile-optimised websites for small businesses and independent brands.",
-  "url": "https://yourdomain.com/portfolio.html",
+  "description": "Web design studio building fast, mobile-optimised websites for emerging businesses and independent brands.",
+  "url": "https://apexdesignni.co.uk/portfolio.html",
   "areaServed": [
     {"@type": "Place", "name": "Northern Ireland"},
     {"@type": "Place", "name": "Belfast"},
@@ -331,7 +344,7 @@ footer .socials a:hover{color:var(--accent)}
 
     <a class="work-card reveal" href="#">
       <div class="shot fit-contain"><img src="images/coming-soon.png" alt="Apex — coming soon"></div>
-      <div class="info"><h3>Project Three</h3><span>Coming soon</span></div>
+      <div class="info"><h3>RJS Property Improvements</h3><span>Coming soon</span></div>
     </a>
 
     <a class="work-card reveal" href="#">
@@ -351,10 +364,20 @@ footer .socials a:hover{color:var(--accent)}
 <footer>
   <a href="index.html" class="logo">apex<span class="dot">.</span></a>
   <div class="socials">
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/apexdesignni/" target="_blank" rel="noopener" aria-label="Apex on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4.2"/>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
   </div>
   <span>&copy; 2026 apex.</span>
 </footer>
+
+<div class="site-credit">
+  <a href="index.html">Site by apex.</a>
+</div>
 
 <script>
 // ============================================================
