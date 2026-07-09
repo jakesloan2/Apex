@@ -326,18 +326,16 @@ footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-
   <div class="contact-grid">
 
     <!-- ===== FORM =====
-         Powered by FormSubmit — free, no signup required.
-         SETUP (takes 1 minute):
-         1. Replace YOUR_EMAIL@example.com below with your real inbox.
-         2. Publish the site and submit the form once yourself —
-            FormSubmit will email you a confirmation link to activate it.
-         3. After that, every message sent through the form lands in
-            your inbox automatically.
-         Docs: https://formsubmit.co  -->
-    <form class="reveal" action="https://formsubmit.co/apexdesignni@gmail.com" method="POST">
+         Powered by Formspree.
+         Submissions are sent to the email set as this form's target
+         in your Formspree dashboard (Forms → Apex → Workflow → Email).
+         The redirect to thanks.html is handled by JavaScript at the
+         bottom of this page (fetch + redirect), so it works on the
+         free Formspree plan without needing to pay for their built-in
+         "Thank You redirect" feature.
+         Docs: https://formspree.io  -->
+    <form class="reveal" id="contact-form" action="https://formspree.io/f/xeebyqen" method="POST">
       <input type="hidden" name="_subject" value="New enquiry from apex. website">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="thanks.html">
       <div>
         <label for="name">Your name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
@@ -425,6 +423,35 @@ document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () 
   const t = document.querySelector('.nav-toggle');
   if (t) t.setAttribute('aria-expanded', 'false');
 }));
+
+// Contact form: submit via fetch so we control the redirect ourselves
+// (Formspree's own custom "Thank You" redirect requires a paid plan —
+// this achieves the same result for free.)
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn ? submitBtn.textContent : '';
+    if (submitBtn) { submitBtn.textContent = 'Sending…'; submitBtn.disabled = true; }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        window.location.href = 'thanks.html';
+      } else {
+        throw new Error('Submission failed');
+      }
+    } catch (err) {
+      if (submitBtn) { submitBtn.textContent = originalText; submitBtn.disabled = false; }
+      alert('Something went wrong sending your message — please try again, or email apexdesignni@gmail.com directly.');
+    }
+  });
+}
 
 </script>
 </body>
