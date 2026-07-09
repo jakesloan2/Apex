@@ -222,8 +222,34 @@ footer{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
 }
 footer .logo{font-size:14px;color:var(--paper)}
-footer .socials{display:flex;gap:18px}
+footer .socials{display:flex;gap:18px;align-items:center}
+footer .socials a{display:flex;align-items:center;color:var(--paper);transition:color .2s}
 footer .socials a:hover{color:var(--accent)}
+footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}
+
+/* ---------- site credit ---------- */
+.site-credit{
+  border-top:1px solid var(--line);
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.site-credit a{display:inline-flex;align-items:center;gap:7px;color:var(--muted);transition:color .2s}
+.site-credit a:hover{color:var(--accent)}
+
+/* ---------- real results / trend card ---------- */
+.trend-card{
+  border:1px solid var(--line);background:var(--ink-2);
+  padding:clamp(24px,4vw,40px);display:grid;grid-template-columns:1.1fr 1fr;gap:36px;align-items:center;
+}
+.trend-card .chart{width:100%;display:block}
+.trend-stats{display:flex;flex-direction:column;gap:22px}
+.trend-stat .num{font-family:var(--display);font-size:clamp(30px,4.2vw,46px);color:var(--paper);line-height:1}
+.trend-stat .headline{font-family:var(--display);font-size:clamp(22px,2.8vw,30px);color:var(--paper);line-height:1.2}
+.trend-stat .num .up{color:var(--accent);font-size:.4em;vertical-align:top;margin-left:8px;letter-spacing:0}
+.trend-stat .label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.14em;margin-top:8px}
+.trend-source{margin-top:6px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);padding-top:16px}
+@media (max-width:780px){.trend-card{grid-template-columns:1fr}}
 
 /* ---------- results / guarantees ---------- */
 .results-grid{
