@@ -12,13 +12,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="About — Web Designer Northern Ireland | apex.">
 <meta property="og:description" content="Meet the person behind Apex, a Northern Ireland-based web design studio serving Belfast, North Down and clients across the UK.">
-<meta property="og:image" content="https://yourdomain.com/og-image.png">
-<meta property="og:url" content="https://yourdomain.com/about.html">
+<meta property="og:image" content="https://apexdesignni.co.uk/og-image.png">
+<meta property="og:url" content="https://apexdesignni.co.uk/about.html">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About — Web Designer Northern Ireland | apex.">
 <meta name="twitter:description" content="Meet the person behind Apex, a Northern Ireland-based web design studio serving Belfast, North Down and clients across the UK.">
-<meta name="twitter:image" content="https://yourdomain.com/og-image.png">
-<link rel="canonical" href="https://yourdomain.com/about.html">
+<meta name="twitter:image" content="https://apexdesignni.co.uk/og-image.png">
+<link rel="canonical" href="https://apexdesignni.co.uk/about.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -247,8 +247,21 @@ footer{
   font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);
 }
 footer .logo{font-size:14px;color:var(--paper)}
-footer .socials{display:flex;gap:18px}
+footer .socials{display:flex;gap:18px;align-items:center}
+footer .socials a{display:flex;align-items:center;color:var(--paper);transition:color .2s}
 footer .socials a:hover{color:var(--accent)}
+footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.6}
+
+/* ---------- site credit ---------- */
+.site-credit{
+  border-top:1px solid var(--line);
+  padding:16px var(--pad);
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+}
+.site-credit a{display:inline-flex;align-items:center;gap:7px;color:var(--muted);transition:color .2s}
+.site-credit a:hover{color:var(--accent)}
+.site-credit img{height:14px;width:auto;display:block}
 
 /* ---------- results / guarantees ---------- */
 .results-grid{
@@ -278,8 +291,8 @@ footer .socials a:hover{color:var(--accent)}
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "apex.",
-  "description": "Web design studio building fast, mobile-optimised websites for small businesses and independent brands.",
-  "url": "https://yourdomain.com/about.html",
+  "description": "Web design studio building fast, mobile-optimised websites for emerging businesses and independent brands.",
+  "url": "https://apexdesignni.co.uk/about.html",
   "areaServed": [
     {"@type": "Place", "name": "Northern Ireland"},
     {"@type": "Place", "name": "Belfast"},
@@ -313,14 +326,14 @@ footer .socials a:hover{color:var(--accent)}
   <div class="about-grid">
     <div>
       <!-- Edit this story to make it yours -->
-      <p class="reveal"><strong>Apex is a one-person web design studio</strong>, built on a mix of business thinking and design skill you don't often find in one place. I design and build websites for small businesses and independent brands — the kind of sites that look sharp, load fast and actually bring customers through the door.</p>
-      <p class="reveal">I studied Business Technology at Ulster University — a degree that sits right at the intersection of how businesses actually operate and how technology can serve them. That's the lens I bring to every site I build: not just what looks good, but what's structured to support real business outcomes, whether that's bookings, enquiries, or sales.</p>
+      <p class="reveal"><strong>Apex started as an idea</strong> — the result of a background in business and technology meeting a genuine interest in design. I build websites for emerging businesses and independent brands: the kind of sites that look sharp, load fast and actually bring customers through the door.</p>
+      <p class="reveal">I hold a Bachelor's in Science in Business Technology — a degree built around the intersection of how businesses operate and how technology drives them forward. That combination is exactly what emerging businesses need: someone who understands not just how to build a website, but how it fits into a wider business strategy, supports real growth, and earns its place as a genuine asset rather than just a digital brochure.</p>
       <p class="reveal">I spent 5+ years in business consultancy with one of the world's leading professional services firms, working with organisations on strategy and performance at a serious level. That background shapes how I approach every project — asking the right questions before building anything, so the finished site does a job for your business rather than just existing.</p>
-      <p class="reveal">I started Apex because too many small businesses face the same choice: an expensive agency, or a generic template that looks like everyone else's. There's a better middle ground — a site built around your brand and your goals, backed by real business thinking, at a price that makes sense.</p>
+      <p class="reveal">I started Apex because too many emerging businesses face the same choice: an expensive agency, or a generic template that looks like everyone else's. There's a better middle ground — a site built around your brand and your goals, backed by real business thinking, at a price that makes sense.</p>
       <p class="reveal">Every project gets the same process: understand the business, design something that fits it, and build a site that's fast, mobile-optimised, and set up to perform well in search. No subscriptions, no lock-in.</p>
 
       <div class="stack reveal">
-        <span>Web design</span><span>Business strategy</span><span>Brand identity</span><span>Responsive design</span><span>SEO basics</span><span>Business consultation</span>
+        <span>Web design</span><span>Business strategy</span><span>Brand identity</span><span>Responsive design</span><span>SEO optimisation</span><span>Business consultation</span>
       </div>
     </div>
 
@@ -340,17 +353,17 @@ footer .socials a:hover{color:var(--accent)}
     <div class="row reveal">
       <span class="num">01</span>
       <h3>talk</h3>
-      <p>A quick call or message. You tell me about your business and what the site needs to do.</p>
+      <p>We start with a quick call or message, where you tell me about your business and what the site needs to do.</p>
     </div>
     <div class="row reveal">
       <span class="num">02</span>
       <h3>design &amp; build</h3>
-      <p>I share a design direction, you give feedback, then I build it. You see progress along the way — no disappearing for weeks.</p>
+      <p>I share a design direction, you give feedback, and then I build it. You'll see progress along the way — no disappearing for weeks.</p>
     </div>
     <div class="row reveal">
       <span class="num">03</span>
       <h3>launch</h3>
-      <p>Live on your domain, tested on phones and desktops, with everything handed over to you.</p>
+      <p>The site goes live on your domain, tested on phones and desktops, with everything handed over to you.</p>
     </div>
   </div>
 </section>
@@ -364,10 +377,20 @@ footer .socials a:hover{color:var(--accent)}
 <footer>
   <a href="index.html" class="logo">apex<span class="dot">.</span></a>
   <div class="socials">
-    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://www.instagram.com/apexdesignni/" target="_blank" rel="noopener" aria-label="Apex on Instagram">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4.2"/>
+        <circle cx="17.4" cy="6.6" r="0.9" fill="currentColor" stroke="none"/>
+      </svg>
+    </a>
   </div>
   <span>&copy; 2026 apex.</span>
 </footer>
+
+<div class="site-credit">
+  <a href="index.html">Site by apex.</a>
+</div>
 
 <script>
 // ============================================================
