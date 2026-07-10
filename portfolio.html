@@ -424,17 +424,14 @@ document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () 
   if (t) t.setAttribute('aria-expanded', 'false');
 }));
 
-// Touch devices: first tap reveals the project name overlay, second tap opens the link
+// Touch devices: project names fade in automatically as each card scrolls into view
 if (window.matchMedia('(hover: none)').matches) {
-  document.querySelectorAll('.overlay-card').forEach(card => {
-    card.addEventListener('click', function (e) {
-      if (!card.classList.contains('show-info')) {
-        e.preventDefault();
-        document.querySelectorAll('.overlay-card.show-info').forEach(c => c.classList.remove('show-info'));
-        card.classList.add('show-info');
-      }
+  const cardObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('show-info', entry.isIntersecting);
     });
-  });
+  }, { threshold: 0.55 });
+  document.querySelectorAll('.overlay-card').forEach(card => cardObserver.observe(card));
 }
 
 </script>
