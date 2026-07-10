@@ -168,6 +168,27 @@ h1,h2{font-family:var(--display);text-transform:lowercase;line-height:.95;letter
 .work-card:hover::after{border-top-width:22px;border-left-width:22px}
 @media (max-width:760px){.work-grid{grid-template-columns:1fr}}
 
+/* ---------- full-bleed portfolio cards (overlay reveal) ---------- */
+.work-grid-full{grid-template-columns:1fr;gap:28px}
+.work-grid-full .work-card .shot{aspect-ratio:16/10}
+.overlay-card{border:1px solid var(--line)}
+.overlay-card .info{
+  position:absolute;left:0;right:0;bottom:0;
+  border-top:0;
+  background:linear-gradient(to top, rgba(10,10,11,.94) 0%, rgba(10,10,11,.72) 55%, transparent 100%);
+  padding:34px 26px 22px;
+  opacity:0;transform:translateY(14px);
+  transition:opacity .35s ease, transform .35s ease;
+  pointer-events:none;
+}
+.overlay-card:hover .info,
+.overlay-card:focus-visible .info,
+.overlay-card.show-info .info{opacity:1;transform:none}
+.overlay-card .info h3{color:var(--paper)}
+@media (max-width:760px){
+  .overlay-card .info{flex-direction:column;align-items:flex-start;gap:4px}
+}
+
 /* placeholder until real screenshots are added */
 .ph{
   display:flex;align-items:center;justify-content:center;height:100%;
@@ -329,24 +350,24 @@ footer .socials svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-
      3. Set the href to the live site URL
      ========================================================= -->
 <section style="padding-top:0">
-  <div class="work-grid">
+  <div class="work-grid work-grid-full">
 
-    <a class="work-card reveal" href="https://www.elevatedbeautyni.co.uk/" target="_blank" rel="noopener">
+    <a class="work-card overlay-card reveal" href="https://www.elevatedbeautyni.co.uk/" target="_blank" rel="noopener">
       <div class="shot"><img src="images/elevated-beauty.png" alt="Elevated Beauty NI website shown on a tablet"></div>
       <div class="info"><h3>Elevated Beauty NI</h3><span>Beauty studio — multi-page site &amp; booking</span></div>
     </a>
 
-    <a class="work-card reveal" href="#" target="_blank" rel="noopener">
+    <a class="work-card overlay-card reveal" href="#" target="_blank" rel="noopener">
       <div class="shot fit-contain"><img src="images/j-barber-studio.jpg" alt="J Barber Studio website shown on a tablet"></div>
       <div class="info"><h3>J Barber Studio</h3><span>Barbershop — one-page site</span></div>
     </a>
 
-    <a class="work-card reveal" href="#">
+    <a class="work-card overlay-card reveal" href="#">
       <div class="shot fit-contain"><img src="images/coming-soon.png" alt="Apex — coming soon"></div>
       <div class="info"><h3>RJS Property Improvements</h3><span>Coming soon</span></div>
     </a>
 
-    <a class="work-card reveal" href="#">
+    <a class="work-card overlay-card reveal" href="#">
       <div class="shot fit-contain"><img src="images/coming-soon.png" alt="Apex — coming soon"></div>
       <div class="info"><h3>Project Four</h3><span>Coming soon</span></div>
     </a>
@@ -402,6 +423,19 @@ document.querySelectorAll('#nav a').forEach(a => a.addEventListener('click', () 
   const t = document.querySelector('.nav-toggle');
   if (t) t.setAttribute('aria-expanded', 'false');
 }));
+
+// Touch devices: first tap reveals the project name overlay, second tap opens the link
+if (window.matchMedia('(hover: none)').matches) {
+  document.querySelectorAll('.overlay-card').forEach(card => {
+    card.addEventListener('click', function (e) {
+      if (!card.classList.contains('show-info')) {
+        e.preventDefault();
+        document.querySelectorAll('.overlay-card.show-info').forEach(c => c.classList.remove('show-info'));
+        card.classList.add('show-info');
+      }
+    });
+  });
+}
 
 </script>
 </body>
