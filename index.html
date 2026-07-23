@@ -112,8 +112,8 @@ section{padding:clamp(70px,10vh,130px) var(--pad)}
 .tags{display:flex;flex-wrap:wrap;gap:10px}
 .tags span{border:1px solid var(--line);border-radius:100px;padding:9px 18px;font-size:13px;transition:border-color .2s}
 .tags span:hover{border-color:var(--accent)}
-.svc-visual{aspect-ratio:16/11;border-radius:14px;background:var(--ink-2);border:1px solid var(--line);display:flex;align-items:center;justify-content:center}
-.svc-visual .mono{font-family:var(--display);font-size:clamp(26px,4vw,50px);text-transform:uppercase;color:var(--ink-3)}
+.svc-visual{aspect-ratio:16/11;border-radius:14px;background:var(--ink-2);border:1px solid var(--line);overflow:hidden}
+.svc-visual img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:760px){.svc-panel-inner{grid-template-columns:1fr;padding-left:0}.svc-visual{order:-1}}
 
 /* WORK CARDS */
@@ -186,6 +186,20 @@ form button:disabled{opacity:.6;cursor:wait}
 .legal a:hover{color:var(--accent)}
 .legal strong{color:var(--paper)}
 
+/* ARROW ICONS (SVG, not emoji glyphs) */
+.ico{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.btn-pill .ico{stroke:var(--accent);transition:stroke .3s,transform .3s}
+.btn-pill:hover .ico{stroke:var(--paper);transform:translate(3px,-3px)}
+.view{display:inline-flex;align-items:center;gap:8px}
+.view .ico{stroke:var(--accent);width:.95em;height:.95em;transition:transform .25s}
+.view:hover .ico{transform:translateX(4px)}
+.inline-link{display:inline-flex;align-items:center;gap:7px}
+.inline-link .ico{stroke:var(--accent);width:.9em;height:.9em;transition:transform .25s}
+.inline-link:hover .ico{transform:translate(2px,-2px)}
+form button .ico{stroke:var(--accent);transition:stroke .3s,transform .3s}
+form button:hover .ico{stroke:var(--paper);transform:translateX(4px)}
+.trend{width:.44em;height:.44em;fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round;vertical-align:super;margin-left:4px}
+
 /* CTA STRIP */
 .cta-strip{border-top:1px solid var(--line);text-align:center}
 .cta-strip .peak-line{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
@@ -255,7 +269,7 @@ footer a:hover{color:var(--accent)}
   </div>
   <div class="menu-foot">
     <a href="mailto:apexdesignni@gmail.com">apexdesignni@gmail.com</a>
-    <a href="https://www.instagram.com/apexdesignni/" target="_blank" rel="noopener">Instagram &rarr;</a>
+    <a href="https://www.instagram.com/apexdesignni/" target="_blank" rel="noopener" class="inline-link">Instagram <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
   </div>
 </nav>
 
@@ -267,7 +281,7 @@ footer a:hover{color:var(--accent)}
   <h1 class="hero-statement" id="statement">We build websites, brands and digital foundations that actually grow your business.</h1>
   <div class="hero-bottom">
     <p class="hero-sub reveal">Fast, mobile-optimised and built from scratch around your brand &mdash; backed by real business thinking, not a template.</p>
-    <a href="contact.html" class="btn-pill reveal d1">Start a project <span>&#8599;</span></a>
+    <a href="contact.html" class="btn-pill reveal d1">Start a project <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></a>
   </div>
 </section>
 
@@ -286,7 +300,7 @@ footer a:hover{color:var(--accent)}
           <p class="svc-desc">Design-led websites and high-converting landing pages, engineered to turn visitors into customers &mdash; not just look good on a screen.</p>
           <div class="tags"><span>Web design</span><span>Web development</span><span>Landing pages</span><span>SEO structure</span></div>
         </div>
-        <div class="svc-visual"><span class="mono">Build</span></div>
+        <div class="svc-visual"><img src="images/website-placeholder.png" alt="Websites" loading="lazy"></div>
       </div></div>
     </div>
     <div class="svc-item">
@@ -300,7 +314,7 @@ footer a:hover{color:var(--accent)}
           <p class="svc-desc">A visual identity built around your business &mdash; typography, colour and a mark that cuts through and makes customers remember you.</p>
           <div class="tags"><span>Visual identity</span><span>Logo &amp; mark</span><span>Art direction</span></div>
         </div>
-        <div class="svc-visual"><span class="mono">Identity</span></div>
+        <div class="svc-visual"><img src="images/brand-identity-placeholder.png" alt="Brand identity" loading="lazy"></div>
       </div></div>
     </div>
     <div class="svc-item">
@@ -314,7 +328,7 @@ footer a:hover{color:var(--accent)}
           <p class="svc-desc">Structured data, local targeting and Google Business setup that help the right customers find you in Belfast, North Down and beyond.</p>
           <div class="tags"><span>Local SEO</span><span>Structured data</span><span>Google Business</span></div>
         </div>
-        <div class="svc-visual"><span class="mono">Found</span></div>
+        <div class="svc-visual"><img src="images/seo-placeholder.png" alt="SEO and visibility" loading="lazy"></div>
       </div></div>
     </div>
     <div class="svc-item">
@@ -328,7 +342,7 @@ footer a:hover{color:var(--accent)}
           <p class="svc-desc">Before a single page is designed, I map the site to a real commercial goal &mdash; the rigour of a consultancy background, applied to your business.</p>
           <div class="tags"><span>Strategy</span><span>Commercial planning</span><span>Growth</span></div>
         </div>
-        <div class="svc-visual"><span class="mono">Strategy</span></div>
+        <div class="svc-visual"><img src="images/consultation-placeholder.png" alt="Business consultation" loading="lazy"></div>
       </div></div>
     </div>
 </div>
@@ -337,15 +351,15 @@ footer a:hover{color:var(--accent)}
 <section>
   <div class="work-top">
     <h2 class="reveal">selected work<span class="dot">.</span></h2>
-    <a href="portfolio.html" class="view reveal">View all &rarr;</a>
+    <a href="portfolio.html" class="view reveal">View all <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
   </div>
   <div class="work-grid">
     <a class="work-card reveal" href="https://www.elevatedbeautyni.co.uk/" target="_blank" rel="noopener">
-      <div class="shot"><img src="images/elevated-beauty.png" alt="Elevated Beauty NI website"></div>
+      <div class="shot"><img src="images/elevated-placeholder.png" alt="Elevated Beauty NI website"></div>
       <div class="info"><h3>Elevated Beauty NI</h3><span>Beauty studio<br>Multi-page &amp; booking</span></div>
     </a>
     <a class="work-card reveal" href="https://jakesloan2.github.io/rock-homes/index.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="images/rock-homes.png" alt="Rock Homes website"></div>
+      <div class="shot"><img src="images/rock-placeholder.png" alt="Rock Homes website"></div>
       <div class="info"><h3>Rock Homes</h3><span>Residential<br>Property developer</span></div>
     </a>
   </div>
@@ -355,11 +369,11 @@ footer a:hover{color:var(--accent)}
   <h2 class="numbers-head reveal">numbers don't lie<span class="dot">.</span></h2>
   <div class="numbers-grid">
     <div class="num-item reveal">
-      <div class="figure">Double-digit<span class="unit">&#8599;</span></div>
+      <div class="figure">Double-digit<svg class="trend" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10"/></svg></div>
       <p class="label">Growth in website visits driven by Google Search &amp; Maps</p>
     </div>
     <div class="num-item reveal d1">
-      <div class="figure">Rising<span class="unit">&#8599;</span></div>
+      <div class="figure">Rising<svg class="trend" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M9 5h10v10"/></svg></div>
       <p class="label">Local visibility, trending up month over month</p>
     </div>
     <div class="num-item reveal d2">
